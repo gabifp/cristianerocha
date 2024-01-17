@@ -11,3 +11,14 @@ div.main {
   display: flex;
   margin: 0 auto;
 }
+
+/* 
+  Menu
+**/
+
+.logo {
+  img {
+    width: 400px;
+    height: 400px;
+  }
+}
