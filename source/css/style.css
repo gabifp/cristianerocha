@@ -84,17 +84,28 @@ header {
   flex-wrap: wrap;
   font: 500 13.8px 'Roboto Condensed';
   text-transform: uppercase;
-  padding: 7px 25px;
+  padding: 10px 15px;
   color: var(--marrom-escuro-2);
   background: linear-gradient(315deg, rgba(218,165,32,1) 9%, rgba(166,135,58,1) 91%);
   border-radius: 15px;
   box-shadow: 0.5px 2px 20px #00000029;
   vertical-align: middle;
+  align-items: center;
 }
 
 .menu-container a.contato:hover {
   font-size: 14px;
   background: #DAA520;
+}
+
+a.contato label {
+  cursor: pointer;
+}
+
+.fa-solid.fa-phone {
+  padding-right: 8px;
+  font-size: 12px;
+  color: var(--marrom-escuro-2);
 }
 
 .menu-container a {
@@ -155,4 +166,41 @@ img.slide-paises {
   border: 1px solid #DAA520;
   color: var(--fundo-claro-2);
 }
+
+/*  
+  Margin & Padding
+**/
+
+.ml-1 {
+  margin-left: 1rem;
+}
+
+.mr-1 {
+  margin-right: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.pr-1 {
+  padding-right: 1rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pb-1 {
+  padding-bottom: 1rem;
+}
+
 
