@@ -5,10 +5,19 @@
 }
 
 :root {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.5rem;
+
+  /*
+    Padrão de estilo
+  **/
+  font-family: var(--font-principal);
+  font-size: 1.55rem;
+
+  /*
+    Cores
+  **/
   --fundo-claro: #F8F8F8;
   --fundo-claro-2: #ebe0d6;
+  --fundo-claro-transparente: #ebe0d6d8;
   --marrom-claro: #C3A58A;
   --marrom-claro-2: #A68F85;
   --marrom-medio: #66554D;
@@ -20,62 +29,81 @@
   --dourado-claro: #A6873A;
   --dourado: #DAA520;
   --cinza-escuro: #33312B;
+
+  /*
+    Fontes
+  **/
+
+  --font-principal: Bebas Neue, sans-serif;
+  --font-botao: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main {
+  position: relative;
 }
 
 
-
 /* 
-Menu
+  Menu
 **/
 
+header {
+}
+
 .wrapper {
-  max-width: 1100;
+  top: 0;
+  width: 100%;
   padding: 0 3%;
   display: flex;
   margin: 0 auto;
   align-items: center;
-  background-color: var(--fundo-claro-2);
+  background-color: var(--fundo-claro-transparente);
+  position: absolute;
 }
 
 .logo {
   img {
+    padding-top: 10px;
     width: 450px;
-    height: 150px;
+    height: 105px;
   }
 }
 
 .menu-container {
   justify-content: space-between;
   letter-spacing: .8px;
-  background-color: var(--fundo-claro);
 }
 
 .menu-container a.contato {
   display: inline-flex;
   flex-wrap: wrap;
-  font: 400 13px 'Roboto Condensed';
+  font: 500 13.8px 'Roboto Condensed';
   text-transform: uppercase;
-  padding: 5px 15px;
-  background-color: var(--marrom-escuro);  
-  color: var(--fundo-claro-2);
-  border-radius: 8px;
-  border: 1px solid var(--marrom-escuro);
-  box-shadow: 0px 5px 20px #00000029;
+  padding: 7px 25px;
+  color: var(--marrom-escuro-2);
+  background: linear-gradient(315deg, rgba(218,165,32,1) 9%, rgba(166,135,58,1) 91%);
+  border-radius: 15px;
+  box-shadow: 0.5px 2px 20px #00000029;
   vertical-align: middle;
 }
 
 .menu-container a.contato:hover {
-  color: var(--fundo-claro);
-  font-weight: bold;
   font-size: 14px;
+  background: #DAA520;
 }
 
 .menu-container a {
   display: inline-block;
   margin: 0 10px;
-  padding: 8px 10px;
+  padding: 0px 10px;
   text-decoration: none;
   color: var(--dourado-claro);
+  cursor: pointer;
   transition: 0.6s;
 }
 
@@ -83,3 +111,48 @@ Menu
   color: var(--marrom-escuro-2);
   transform: scale(1.03);
 }
+
+/*
+  Carousel
+**/
+
+img.slide-paises {
+  width: 100%;
+  height: 650px;
+}
+
+.carousel {
+  .carousel-title {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    font: 50px 'Bebas Neue', sans-serif;
+    color: var(--fundo-claro);
+    text-shadow: 1px 2px 30px #0000006d;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+
+/*
+  Button
+**/
+
+.btn {
+  font-weight: 400;
+  font-size: 1.5rem;
+  font-family: var(--font-principal);
+  min-width: 250px;
+  min-height: 40px;
+  border-radius: 5px;
+  box-shadow: 0.5px 2px 20px #00000029;
+  opacity: 0.9;
+}
+
+.btn-info {
+  padding: 1rem;
+  border: 1px solid #DAA520;
+  color: var(--fundo-claro-2);
+}
+
