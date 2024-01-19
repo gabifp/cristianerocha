@@ -120,7 +120,7 @@ a.contato label {
 
 .menu-container a:hover {
   color: var(--marrom-escuro-2);
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 /*
@@ -138,11 +138,20 @@ img.slide-paises {
     display: flex;
     position: absolute;
     top: 50%;
+    justify-content: center;
+  }
+
+  .carousel-title label {
     font: 50px 'Bebas Neue', sans-serif;
     color: var(--fundo-claro);
     text-shadow: 1px 2px 30px #0000006d;
-    justify-content: center;
     cursor: pointer;
+    transition: 0.6s;
+
+  }
+
+  .carousel-title label:hover {
+    transform: scale(1.04);
   }
 }
 
