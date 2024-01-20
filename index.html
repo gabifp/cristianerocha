@@ -13,16 +13,67 @@
 </head>
 <body>
   <section class="main">
-    <div class="carousel">
-      <img class="slide-paises" src="source/media/imagem/alemanha.png" alt="italia">
-      <h1 class="carousel-title">
-        <label> Como posso obter a Cidadania Alemã? </label>
-      </h1>
+    <div class="slider">
+      <div class="slides">
+        <!-- Slide radios -->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+
+        <div class="slide first">
+          <div class="slide-wrapper-img">
+            <img src="source/media/imagem/espanha-2.png" alt="Imagem da Espanha">
+            <a class="slide-title">
+              <label>Lei de Memória Democrática</label>
+            </a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-wrapper-img">
+            <img src="source/media/imagem/alemanha.png" alt="Imagem da Alemanha">
+            <a class="slide-title">
+              <label>Como posso obter a Cidadania Alemã?</label>
+            </a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-wrapper-img">
+            <img src="source/media/imagem/portugal (2).png" alt="Imagem de Portugal">
+            <a class="slide-title">
+              <label>Cidadania Portuguesa via Judeu Sefardita</label>
+            </a>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-wrapper-img">
+            <img src="source/media/imagem/italia-barcos.jpg" alt="Imagem da Itália">
+            <a class="slide-title">
+              <label>Vantagens da Cidadania Italiana</label>
+            </a>
+          </div>
+        </div>
+
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+      </div>
+
+      <div class="manual-navigation">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
     </div>
+    
     <header>
       <div class="wrapper menu-container">
         <div class="logo">
-          <a href="source/index.html">
+          <a href="index.html">
             <img src="source/media/imagem/logo-paisagem.svg" alt="logo">
           </a>
         </div>
@@ -38,6 +89,56 @@
         </div>
       </div>
     </header>
+
+    <section class="cards">
+      <div class="title gradient">
+        <h1>SERVIÇOS</h1>
+      </div>
+      <div class="card">
+        <div class="card-item">
+          <img src="/source/media/imagem/portugal-icon.svg" alt="Ícone da bandeira de Portugal">
+          <span></span>
+          <label>Cidadania Portuguesa</label>
+        </div>
+        <div class="card-item">
+          <img src="/source/media/imagem/espanha-icon.svg" alt="Ícone da bandeira de Portugal">
+          <span></span>
+          <label>Cidadania Espanhola</label>
+        </div>
+        <div class="card-item">
+          <img src="/source/media/imagem/italia-icon.svg" alt="Ícone da bandeira de Portugal">
+          <span></span>
+          <label>Cidadania Italiana</label>
+        </div>
+        <div class="card-item">
+          <img src="/source/media/imagem/alemanha-icon.svg" alt="Ícone da bandeira de Portugal">
+          <span></span>
+          <label>Cidadania Alemã</label>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-item">
+          <i class="fa-solid fa-star-of-david"></i>
+          <span></span>
+          <label>Cidadania Portuguesa via Judeu Sefardita</label>
+        </div>
+        <div class="card-item">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <span></span>
+          <label>Cidadania Espanhola via Lei de Memória Democrática</label>
+        </div>
+        <div class="card-item">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <span></span>
+          <label>Cidadania Portuguesa via Lei de Memória Democrática</label>
+        </div>
+        <div class="card-item">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span></span>
+          <label>Homologação de Diplomas na Europa</label>
+        </div>
+      </div>
+    </section>
   </section>
 </body>
 </html>
