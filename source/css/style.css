@@ -292,6 +292,8 @@ a.contato label {
 }
 
 .card-item img {
+  width: 55px;
+  height: 40px;
   margin: 5px 0 15px 0;
   transition: 1s;
 }
