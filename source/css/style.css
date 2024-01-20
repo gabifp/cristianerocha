@@ -6,13 +6,13 @@
 
 :root {
 
-  /*
+  /************************
     Padrão de estilo
   **/
   font-family: var(--font-principal);
   font-size: 1.55rem;
 
-  /*
+  /************************
     Cores
   **/
   --fundo-claro: #F8F8F8;
@@ -31,7 +31,7 @@
   --dourado: #DAA520;
   --cinza-escuro: #33312B;
 
-  /*
+  /************************
     Fontes
   **/
 
@@ -50,7 +50,7 @@ body {
 }
 
 
-/* 
+/************************ 
   Menu
 **/
 
@@ -124,7 +124,7 @@ a.contato label {
   transform: scale(1.04);
 }
 
-/*
+/************************
   Slider
 **/
 
@@ -203,6 +203,25 @@ a.contato label {
   transition: 0.8s;
 }
 
+.navigation-auto div {
+  border: 1px solid var(--dourado-claro);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
 .slide-title {
   width: 100%;
   display: flex;
@@ -225,7 +244,7 @@ a.contato label {
   transform: scale(1.04);
 }
 
-/*
+/************************
   Cards
 **/
 
@@ -242,7 +261,7 @@ a.contato label {
 
 .card .card-item {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   margin: 40px 20px;
@@ -298,7 +317,7 @@ a.contato label {
   transition: 1s;
 }
 
-/*
+/************************
 Headings
 **/
 
@@ -320,7 +339,7 @@ Headings
   -webkit-text-fill-color: transparent;
 }
 
-/*
+/************************
   Button
 **/
 
@@ -341,7 +360,7 @@ Headings
   color: var(--fundo-claro-2);
 }
 
-/*  
+/************************  
   Margin & Padding
 **/
 
