@@ -61,7 +61,7 @@ body {
   display: flex;
   margin: 0 auto;
   align-items: center;
-  background: linear-gradient(346deg, #d5c59f 5%, var(--fundo-dourado-claro) 95%);
+  background: linear-gradient(346deg, #d2c7ae 5%, var(--fundo-dourado-claro) 95%);
   position: absolute;
 }
 
