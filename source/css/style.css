@@ -16,20 +16,18 @@
     Cores
   **/
   --fundo-claro: #F8F8F8;
-  --fundo-claro-2: #ebe0d6;
+  --fundo-claro-2: #e9dfc3;
   --fundo-claro-transparente: #ebe6d6d8;
   --fundo-dourado-claro: #f3e8cc;
-  --marrom-claro: #C3A58A;
-  --marrom-claro-2: #A68F85;
-  --marrom-medio: #66554D;
-  --marom-medio-2: #5F4B3F;
-  --marrom-escuro: #3A2620;
-  --marrom-escuro-2: #261913;
-  --verde-claro: #677B79;
-  --verde-escuro: #132624;
+  --dourado-pastel: #9E9475;
   --dourado-claro: #A6873A;
+  --dourado-claro-2: #D1B971;
   --dourado: #DAA520;
+  --dourado-2: #FFC312;
+  --dourado-medio: #97731a;
+  --dourado-cinza: #383325;
   --cinza-escuro: #33312B;
+  --cinza-claro: #6B675C;
 
   /************************
     Fontes
@@ -56,7 +54,7 @@ Location
   justify-content: space-between;
   align-items: center;
   vertical-align: middle;
-  background-color: #22211ef1;
+  background: linear-gradient(7deg, #000000d2 15%, #3b321af1 85%);
 }
 
 .location-container div {
@@ -65,7 +63,7 @@ Location
 }
 
 .location-container label {
-  font: 400 11px 'Poppins', sans-serif;
+  font: 400 10px 'Poppins', sans-serif;
   text-shadow: 1px 2px 30px #0000006d;
   color: var(--fundo-claro-transparente);
 }
@@ -76,6 +74,16 @@ Location
   color: var(--dourado);
 }
 
+.location-container .contact-last-item a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.location-container .contact-last-item label {
+  cursor: pointer;
+}
+
 
 /************************ 
 Menu
@@ -84,6 +92,7 @@ Menu
 .wrapper {
   top: 5.1%;
   width: 100%;
+  height: 15%;
   padding: 0 3%;
   display: flex;
   margin: 0 auto;
@@ -102,8 +111,8 @@ Menu
 .menu-container {
   justify-content: space-between;
   letter-spacing: .8px;
-  background: linear-gradient(177deg, #d2c7aea6 20%, var(--fundo-dourado-claro) 80%);
-  box-shadow: 1px 5px 30px 10px #18181729;;
+  background: linear-gradient(177deg, #d2c7ae7d 15%, #f3e8cc 85%);
+  box-shadow: 0px 0px 8px -1px #000000d2;  
   z-index: 50;
 }
 
@@ -113,7 +122,7 @@ Menu
   font: 500 13.8px 'Roboto Condensed';
   text-transform: uppercase;
   padding: 10px 15px;
-  color: var(--marrom-escuro-2);
+  color: var(--cinza-escuro);
   background: linear-gradient(315deg, rgba(218,165,32,1) 9%, rgba(166,135,58,1) 91%);
   border-radius: 15px;
   box-shadow: 0.5px 2px 20px #00000029;
@@ -133,7 +142,7 @@ a.contato label {
 a.contato .fa-solid.fa-phone {
   padding-right: 8px;
   font-size: 12px;
-  color: var(--marrom-escuro-2);
+  color: var(--dourado-cinza);
   cursor: pointer;
 }
 
@@ -149,7 +158,7 @@ a.contato .fa-solid.fa-phone {
 }
 
 .menu-container a:hover {
-  color: var(--marrom-escuro-2);
+  color: var(--cinza-escuro);
   transform: scale(1.04);
 }
 
@@ -307,7 +316,7 @@ a.contato .fa-solid.fa-phone {
   flex-direction: column;
   flex: auto;
   padding: 25px 0px;
-  background: linear-gradient(146deg, #d8c79b 15%, var(--fundo-dourado-claro) 85%);
+  background: linear-gradient(146deg, #d2cdc1 15%, var(--fundo-dourado-claro) 85%);
 }
 
 .card {
@@ -328,7 +337,7 @@ a.contato .fa-solid.fa-phone {
   text-align: center;
   width: 270px;
   height: 210px;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid #ebe0d694;
   box-shadow: 0px 5px 30px #2619134b;
   background-color: #f8f8f892;
@@ -337,9 +346,8 @@ a.contato .fa-solid.fa-phone {
 }
 
 .card .card-item:hover {
-  background: linear-gradient(146deg, #534117d2 15%, var(--dourado-claro) 85%);
+  background: linear-gradient(326deg, #a28c53 20%, #2e2200c4 96%);
   transform: scale(1.04);
-  
 }
 
 .card .card-item:hover > label {
@@ -351,7 +359,7 @@ a.contato .fa-solid.fa-phone {
 }
 
 .card .card-item:hover > span {
-  border-color: var(--marrom-claro);
+  border-color: var(--dourado-claro-2);
 }
 
 .card-item > label {
@@ -368,7 +376,7 @@ a.contato .fa-solid.fa-phone {
 
 .card-item span {
   width: 60%;
-  border-top: 1px solid var(--marrom-claro-2);
+  border-top: 1px solid var(--dourado-claro-2);
 }
 
 .card-item i {
@@ -391,37 +399,117 @@ a.contato .fa-solid.fa-phone {
 
 .contact {
   padding: 25px 0;
-  background: linear-gradient(146deg, #534117d2 15%, #47370ef1 85%);
+  background: linear-gradient(352deg, #d2c7aea6 20%, #c7b16fe8 80%);
+  box-shadow: 0px 0px 8px -1px #000000d2;
 }
 
+/* .contact {
+  padding: 25px 0;
+  background: linear-gradient(146deg, #a9802ed2 15%, #ffd360f1 85%);
+} */
+
 .contact-container ul {
-  margin-bottom: 30px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
 .contact li {
+  margin: 0 10px;
+  display: inline-flex;
+  flex-direction: column;
+  vertical-align: middle;
+  align-items: right;
   list-style: none;
-  text-align: center;
-  width: 20%;
 }
 
-.contact li:hover {
-  color: rgba(218,165,32,1);
+.contact li:hover i {
+  color: var(--dourado-cinza);
+}
+
+.contact li:hover a {
+  color: var(--dourado-cinza);
 }
 
 .contact a {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+  color: #181717;
 }
 
-.contact a:hover {
-  text-decoration: none;
+.contact a:visited {
+  color: #181717;
 }
 
 .contact i {
-  font-size: 35px;
-  color: var(--fundo-claro-transparente);
+  font-size: 25px;
+  color: var(--dourado-cinza);
 }
+
+.profile {
+  margin-bottom: 25px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile .social-media {
+  padding: 0 40px;
+  border-right: 1px solid #38332591;
+}
+
+.profile .social-media > img {
+  width: 150px;
+}
+
+.profile .social-media ul {
+  flex-direction: row !important;
+}
+
+.profile .social-media i {
+  font-size: 15px;
+  color: var(--dourado-medio);
+}
+
+.profile .contact-item {
+  padding: 0 40px;
+}
+
+.profile .contact-item li {
+  padding: 15px 10px;
+}
+
+.profile .contact-item li h4 {
+  color: var(--dourado-medio);
+  margin-left: -20px;
+}
+
+.profile .contact-item a {
+  padding: 5px;
+}
+
+.profile .contact-item a label {
+  font: 400 12px 'Poppins', sans-serif;
+  color: var(--cinza-escuro);
+}
+
+.profile .contact-item a i {
+  padding-right: 8px;
+  font-size: 15px;
+}
+
+.profile .contact-item a:hover i {
+  color: var(--dourado-medio);
+}
+
+.profile .contact-item a:hover label {
+  color: var(--cinza-claro);
+}
+
+
+
+
 
 /************************
 Footer
@@ -457,14 +545,14 @@ Headings
 }
 
 .gradient {
-  background-image: linear-gradient(315deg, var(--marrom-escuro-2) 15%, var(--dourado) 85%);  
+  background-image: linear-gradient(7deg, #000000d2 15%, #3b321af1 85%);
   background-clip: text;
   -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
   -webkit-text-fill-color: transparent;
 }
 
 .cor-unica {
-  color: var(--fundo-claro-transparente) !important;
+  color: var(--dourado-cinza) !important;
 }
 
 /************************

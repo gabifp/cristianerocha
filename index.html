@@ -19,16 +19,20 @@
         <label>Zhivago's Conner - Dublin 1</label>
       </div>
       <div class="contact-last-item">
-        <i class="fa-solid fa-envelope"></i>  
-        <label>cristiane@assessoriainternacional.com</label>  
-        <i class="fa-brands fa-whatsapp ml-1"></i>      
-        <label>+353 83 308 4131</label>
+        <a href="mailto:contato@cristianerocha.com?">
+          <i class="fa-regular fa-envelope"></i>          
+          <label id="email">contato@cristianerocha.com</label>
+        </a> 
+        <a href="https://api.whatsapp.com/send/?phone=%2B3530838593308&text&type=phone_number&app_absent=0" id="whatsapp" target="_blank">
+          <i class="fa-brands fa-whatsapp ml-1"></i>
+          <label>+353 83 308 4131</label>
+        </a>
       </div>
     </div>
     <div class="wrapper menu-container">
       <div class="logo">
         <a href="index.html">
-          <img src="source/media/imagem/logo-paisagem.svg" alt="logo">
+          <img src="source/media/imagem/logo-paisagem-3.svg" alt="logo">
         </a>
       </div>
       <div class="menu">
@@ -154,28 +158,53 @@
         <h1 id="contact">CONTATO</h1>
       </div>
       <div class="contact-container">
-        <ul>
-          <li>
-            <a href="https://www.instagram.com/acris.rocha/" target="_blank">
-              <i class="fa-brands fa-instagram"></i>          
-            </a>
-          </li>
-          <li>
-            <a href="https://www.facebook.com/cristiane.rocha.14606" target="_blank">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:cristiane@assessoriainternacional.com?" id="email" target="_blank">
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://api.whatsapp.com/send/?phone=%2B3530838593308&text&type=phone_number&app_absent=0" target="_blank">
-              <i class="fa-brands fa-whatsapp"></i>              
-            </a>
-          </li>
-        </ul>
+        <div class="profile">
+          <div class="social-media">
+            <img src="source/media/imagem/logo-retrato-sm.svg" alt="logo">
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/acris.rocha/" target="_blank" id="instagram">
+                  <i class="fa-brands fa-instagram"></i>        
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/cristiane.rocha.14606" target="_blank" id="facebook">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a target="_blank" id="whatsapp">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="contact-item">
+            <ul>
+              <li>
+                <h4>Localização</h4>
+                <a id="Localizacao">
+                  <i class="fa-solid fa-location-dot"></i>      
+                  <label for="localizacao">
+                    Zhivago's Conner - Dublin 1
+                  </label>    
+                </a>
+              </li>
+              <li>
+                <h4>Contatos</h4>
+                <a href="mailto:contato@crstianerocha.com?" id="email" target="_blank" id="email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <label for="email">contato@cristianerocha.com</label>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B3530838593308&text&type=phone_number&app_absent=0" target="_blank" id="whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>   
+                  <label for="whatsapp">+353 83 308 4131</label>           
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </section>
@@ -185,7 +214,5 @@
       <label for="marca registrada">By Gabriela Pimentel</label> 
     </div>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
