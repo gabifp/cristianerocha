@@ -17,7 +17,7 @@
   **/
   --fundo-claro: #F8F8F8;
   --fundo-claro-2: #ebe0d6;
-  --fundo-claro-transparente: #ebe0d6d8;
+  --fundo-claro-transparente: #ebe6d6d8;
   --fundo-dourado-claro: #f3e8cc;
   --marrom-claro: #C3A58A;
   --marrom-claro-2: #A68F85;
@@ -45,23 +45,49 @@ body {
   min-height: 100vh;
 }
 
-.main {
-  position: relative;
+/************************ 
+Location
+**/
+
+.location-container {
+  margin: 0;
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  background-color: #22211ef1;
+}
+
+.location-container div {
+  display: flex;
+  align-items: center;
+}
+
+.location-container label {
+  font: 400 11px 'Poppins', sans-serif;
+  text-shadow: 1px 2px 30px #0000006d;
+  color: var(--fundo-claro-transparente);
+}
+
+.location-container i {
+  padding-right: 5px;
+  font-size: 12px;
+  color: var(--dourado);
 }
 
 
 /************************ 
-  Menu
+Menu
 **/
 
 .wrapper {
-  top: 0;
+  top: 5.1%;
   width: 100%;
   padding: 0 3%;
   display: flex;
   margin: 0 auto;
   align-items: center;
-  background: linear-gradient(346deg, #d2c7ae 5%, var(--fundo-dourado-claro) 95%);
   position: absolute;
 }
 
@@ -76,7 +102,8 @@ body {
 .menu-container {
   justify-content: space-between;
   letter-spacing: .8px;
-  box-shadow: 10px 20px 30px #18181729;
+  background: linear-gradient(177deg, #d2c7aea6 20%, var(--fundo-dourado-claro) 80%);
+  box-shadow: 1px 5px 30px 10px #18181729;;
   z-index: 50;
 }
 
@@ -103,16 +130,18 @@ a.contato label {
   cursor: pointer;
 }
 
-.fa-solid.fa-phone {
+a.contato .fa-solid.fa-phone {
   padding-right: 8px;
   font-size: 12px;
   color: var(--marrom-escuro-2);
+  cursor: pointer;
 }
 
 .menu-container a {
   display: inline-block;
   margin: 0 10px;
   padding: 0px 10px;
+  font-size: 18px;
   text-decoration: none;
   color: var(--dourado-claro);
   cursor: pointer;
@@ -126,7 +155,11 @@ a.contato label {
 
 /************************
   Slider
-**/
+  **/
+
+.main {
+  position: relative;
+}
 
 .slider {
   margin: 0;
@@ -134,6 +167,7 @@ a.contato label {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
 
 .slides {
@@ -158,26 +192,27 @@ a.contato label {
 .manual-navigation {
   position: absolute;
   width: 100%;
-  margin-top: -40px;
+  top: 92%;
   display: flex;
   justify-content: center;
 }
 
 .manual-btn {
   padding: 5px;
-  border: 2px solid #fff;
+  border: 2px solid #00000000;
   border-radius: 10px;
   cursor: pointer;
   transition: 1s;
-  opacity: .5;
-}
-
-.manual-btn:not(:last-child) {
-  margin-right: 40px;
+  opacity: 0;
 }
 
 .manual-btn:hover {
-  background-color: var(--fundo-claro);
+  background-color: var(--dourado);
+  opacity: 1 !important;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 2.5rem;
 }
 
 #radio1:checked ~ .first {
@@ -203,23 +238,42 @@ a.contato label {
   transition: 0.8s;
 }
 
-.navigation-auto div {
-  border: 1px solid var(--dourado-claro);
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: 1s;
-}
-
 .navigation-auto {
   position: absolute;
+  top: 92%;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+.navigation-auto div {
+  padding: 5px;
+  border: 2px solid var(--dourado-claro);
+  border-radius: 10px;
+  box-shadow: 0px 5px 2px #0000001b;
+  cursor: pointer;
+  transition: .6s;
+  opacity: .8;
+}
+
 .navigation-auto div:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 2.5rem;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: var(--dourado-claro);
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: var(--dourado-claro);
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: var(--dourado-claro);
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: var(--dourado-claro);
 }
 
 .slide-title {
@@ -249,14 +303,19 @@ a.contato label {
 **/
 
 .cards {
-  margin: 0;
-  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  padding: 25px 0px;
   background: linear-gradient(146deg, #d8c79b 15%, var(--fundo-dourado-claro) 85%);
 }
 
 .card {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 40px;
 }
 
 .card .card-item {
@@ -264,7 +323,7 @@ a.contato label {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  margin: 40px 20px;
+  margin: 20px 20px;
   padding: 15px;
   text-align: center;
   width: 270px;
@@ -272,11 +331,15 @@ a.contato label {
   border-radius: 10px;
   border: 1px solid #ebe0d694;
   box-shadow: 0px 5px 30px #2619134b;
-  background-color: var(--fundo-claro);
+  background-color: #f8f8f892;
+  transition: .8s;
+  cursor: pointer;
 }
 
 .card .card-item:hover {
   background: linear-gradient(146deg, #534117d2 15%, var(--dourado-claro) 85%);
+  transform: scale(1.04);
+  
 }
 
 .card .card-item:hover > label {
@@ -292,11 +355,15 @@ a.contato label {
 }
 
 .card-item > label {
-  margin: 15px 0 30px 0;
+  display: inline-flex;
+  align-items: center;
+  margin: 15px 0;
+  min-height: 4rem;
   font: 400 18px 'Poppins', sans-serif;
   color: var(--dourado-claro);
   letter-spacing: -.5px;
   z-index: 15;
+  cursor: pointer;
 }
 
 .card-item span {
@@ -308,14 +375,70 @@ a.contato label {
   margin: 30px 0 15px 0;
   font-size: 35px;
   color: var(--dourado-claro);
+  cursor: pointer;
 }
 
 .card-item img {
   width: 55px;
   height: 40px;
-  margin: 5px 0 15px 0;
+  margin: 30px 0 15px 0;
   transition: 1s;
 }
+
+/************************  
+  Contato
+**/
+
+.contact {
+  padding: 25px 0;
+  background: linear-gradient(146deg, #534117d2 15%, #47370ef1 85%);
+}
+
+.contact-container ul {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact li {
+  list-style: none;
+  text-align: center;
+  width: 20%;
+}
+
+.contact li:hover {
+  color: rgba(218,165,32,1);
+}
+
+.contact a {
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: none;
+}
+
+.contact i {
+  font-size: 35px;
+  color: var(--fundo-claro-transparente);
+}
+
+/************************
+Footer
+**/
+
+footer {
+  text-align: right;
+}
+
+footer .fa-regular.fa-registered {
+  padding-right: 10px;
+}
+
+footer label {
+  color: #A6873A;
+}
+
 
 /************************
 Headings
@@ -327,8 +450,9 @@ Headings
 }
 
 .title h1 {
-  font: 800 50px 'Poppins', sans-serif;
-  color: linear-gradient(315deg, rgba(218,165,32,1) 9%, rgba(166,135,58,1) 91%);
+  margin: 25px 0;
+  font: 800 50px 'Bebas Neue', sans-serif;
+  color: linear-gradient(315deg, rgba(218,165,32,1) 35%, rgba(166,135,58,1) 65%);
   text-shadow: 0px .5px 2px #2619134b;
 }
 
@@ -337,6 +461,10 @@ Headings
   background-clip: text;
   -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
   -webkit-text-fill-color: transparent;
+}
+
+.cor-unica {
+  color: var(--fundo-claro-transparente) !important;
 }
 
 /************************
@@ -364,6 +492,10 @@ Headings
   Margin & Padding
 **/
 
+.m-1 {
+  margin: 1rem;
+}
+
 .ml-1 {
   margin-left: 1rem;
 }
@@ -380,6 +512,10 @@ Headings
   margin-bottom: 1rem;
 }
 
+.p-1 {
+  padding: 1rem;
+} 
+
 .pl-1 {
   padding-left: 1rem;
 }
@@ -395,5 +531,42 @@ Headings
 .pb-1 {
   padding-bottom: 1rem;
 }
+
+/************************  
+  Width
+**/
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.W-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+/************************  
+  Util
+**/
+
+.scroll {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+
+
+
 
 
