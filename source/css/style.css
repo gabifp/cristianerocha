@@ -192,7 +192,7 @@ a.contato .fa-solid.fa-phone {
 .manual-navigation {
   position: absolute;
   width: 100%;
-  top: 92%;
+  top: 89%;
   display: flex;
   justify-content: center;
 }
@@ -240,7 +240,7 @@ a.contato .fa-solid.fa-phone {
 
 .navigation-auto {
   position: absolute;
-  top: 92%;
+  top: 89%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -432,7 +432,7 @@ footer {
 }
 
 footer .fa-regular.fa-registered {
-  padding-right: 10px;
+  padding-right: 8px;
 }
 
 footer label {
