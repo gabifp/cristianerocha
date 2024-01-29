@@ -38,6 +38,11 @@
   --font-leitura: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: .4s;
+}
+
 body {
   align-items: center;
   min-height: 100vh;
@@ -541,7 +546,7 @@ footer {
   font-size: 14px;
   color: var(--dourado-medio);
   cursor: pointer;
-  transition: .8s;
+  transition: opacity 0.5s;
 }
 
 .footer-items a label:hover {
