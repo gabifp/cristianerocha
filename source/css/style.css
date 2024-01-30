@@ -106,11 +106,18 @@ Menu
 }
 
 .logo {
+  transition: all 0.5s ease;
+  
+  &:hover {
+    transform: scale(1.04);
+  }
+
   img {
     padding-top: 10px;
     width: 450px;
     height: 105px;
   }
+
 }
 
 .menu-container {
@@ -121,7 +128,17 @@ Menu
   z-index: 50;
 }
 
-.menu-container a.contato {
+.menu .menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu .menu-list li:first-child {
+  margin-right: 18px;
+}
+
+.menu .menu-list > li.contato > a {
   display: inline-flex;
   flex-wrap: wrap;
   font: 500 13.8px 'Roboto Condensed';
@@ -135,37 +152,142 @@ Menu
   align-items: center;
 }
 
-.menu-container a.contato:hover {
+.menu .menu-list > li.contato:hover > a {
   font-size: 14px;
   background: #DAA520;
 }
 
-a.contato label {
+.menu .menu-list > li.contato > a > label {
   cursor: pointer;
 }
 
-a.contato .fa-solid.fa-phone {
+.menu .menu-list > li.contato .fa-solid.fa-phone {
   padding-right: 8px;
   font-size: 12px;
   color: var(--dourado-cinza);
   cursor: pointer;
 }
 
-.menu-container a {
+.menu .menu-list > li {
   display: inline-block;
-  margin: 0 10px;
-  padding: 0px 10px;
+  margin: 0 5px;
+  padding: 0px 5px;
   font-size: 18px;
-  text-decoration: none;
-  color: var(--dourado-claro);
   cursor: pointer;
   transition: 0.6s;
 }
 
-.menu-container a:hover {
+.menu .menu-list > li:hover {
+  transform: scale(1.04);
+}
+
+.menu .menu-list > li:hover .form label {
   color: var(--cinza-escuro);
   transform: scale(1.04);
 }
+
+.menu .menu-list > li:hover .form i {
+  color: var(--cinza-claro);
+  transform: scale(1.04);
+}
+
+.menu .menu-list > li:hover > a { 
+  color: var(--cinza-escuro);
+  transform: scale(1.04);
+}
+
+.menu .menu-list > li > a {
+  text-decoration: none;
+  color: var(--dourado-claro);
+  cursor: pointer;
+}
+
+.dropdown-menu {
+	width: 100px;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+  position: relative;
+
+	.form {
+		display: flex;
+    justify-content: space-evenly;
+
+    label {
+      padding-right: 3px;
+      font: 400 18px 'Bebas Neue';
+      letter-spacing: 0.8px;
+      color: var(--dourado-claro);
+      cursor: pointer;
+    }
+
+		.button {
+			.fa-chevron-down {
+				transform: rotate(0deg);
+				transition: all 0.6s;
+				&.active {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		button {
+      display: inline-flex;
+      align-items: center;
+			border: none;
+			background: transparent;
+      color: var(--dourado-cinza);
+			cursor: pointer;
+      margin-left: -2%;
+		}
+
+    button:focus {
+      outline: none;
+    }
+	}
+
+	.dropdown-list {
+		display: none;
+    position: absolute;
+    top: 130%;
+    right: -42%;
+    width: max-content;
+    padding: 0;
+    background-color: #a59567ae;
+    border-radius: 5px;
+    align-items: center;
+
+		li {
+			width: 100%;
+      list-style: none;
+      border-radius: 5px;
+
+			&:hover {
+				background-color: var(--dourado-pastel);
+				transition: all 0.5s ease;
+			}
+
+      &:hover a {
+        font-weight: 500;
+        color: var(--dourado-cinza);
+			}
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        font: 400 10px 'Poppins';
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        color: var(--dourado-cinza);
+        text-decoration: none;
+        padding: 10px;
+      }
+		}
+	}
+}
+
+
+
 
 /************************
   Slider
@@ -546,7 +668,7 @@ footer {
   font-size: 14px;
   color: var(--dourado-medio);
   cursor: pointer;
-  transition: opacity 0.5s;
+  transition: opacity .2s;
 }
 
 .footer-items a label:hover {
@@ -555,13 +677,12 @@ footer {
   transform: scale(1.04);
 }
 
-
 .footer-items a i.fa-solid.fa-chevron-up {
   display: none;
 }
 
 footer .fa-regular.fa-registered {
-  font-size: 12px;
+  font-size: 10px;
   padding-right: 3px;
   color: var(--dourado-cinza);
 }
