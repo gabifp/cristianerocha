@@ -13,7 +13,7 @@
 </head>
 <body>
   <header id="header">
-    <div class="location-container">
+    <div class="nav-location-container">
       <div>
         <i class="fa-solid fa-location-dot"></i>
         <label>Zhivago's Conner - Dublin 1</label>
@@ -36,14 +36,48 @@
         </a>
       </div>
       <div class="menu">
-        <a href="#">Home</a>      
-        <a href="#">Sobre nós</a>
-        <a href="#">Serviços</a>
-        <a href="#">Depoimentos</a>
-        <a class="contato" href="#contact">
-          <i class="fa-solid fa-phone"></i>            
-          <label>Contato</label>
-        </a>
+        <ul class="menu-list">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Sobre nós</a>
+          </li>
+          <li>
+            <div class="dropdown-menu">
+              <div class="form">
+                <button class="button" id="button-services"> 
+                  <label for="select">Serviços</label>
+                  <i class="fa-solid fa-chevron-down"></i>
+                </button>
+              </div>
+              <ul class="dropdown-list">
+                <li>
+                  <a href="#">Cidadania Portuguesa</a>
+                </li>
+                <li>
+                  <a href="#">Cidadania Espanhola</a>
+                </li>
+                <li>
+                  <a href="#">Cidadania Italiana</a>
+                </li>
+                <li>
+                  <a href="#">Cidadania Alemã</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="#">Depoimentos</a>
+          </li>
+          <li></li>
+          <li class="contato">
+            <a href="#contact">
+              <i class="fa-solid fa-phone"></i>            
+              <label>Contato</label>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </header>
@@ -184,9 +218,9 @@
             <ul>
               <li>
                 <h4>Localização</h4>
-                <a id="Localizacao">
+                <a id="location">
                   <i class="fa-solid fa-location-dot"></i>      
-                  <label for="localizacao">
+                  <label for="location">
                     Zhivago's Conner - Dublin 1
                   </label>    
                 </a>
@@ -222,5 +256,8 @@
       </div>
     </div>
   </footer>
-</body>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="source/js/script.js"></script>
+  </body>
 </html>
