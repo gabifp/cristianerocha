@@ -9,8 +9,7 @@
   /************************
     Padrão de estilo
   **/
-  font-family: var(--font-principal);
-  font-size: 1.2rem;
+  font: 400 1.2rem var(--font-principal);
 
   /************************
     Cores
@@ -188,8 +187,9 @@ Menu
 
 .menu-container {
   justify-content: space-between;
-  letter-spacing: .8px;
-  background: linear-gradient(177deg, #d2c7ae7d 15%, #f3e8cc 85%);
+  font: 400 16px "M PLUS Rounded 1c", sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(177deg, #d2c7aeb3 15%, #e3e3e3 85%);
   box-shadow: 0px 0px 8px -1px #000000d2;  
 }
 
@@ -206,7 +206,7 @@ Menu
 .menu .menu-list > li.contato > a {
   display: inline-flex;
   flex-wrap: wrap;
-  font: 500 13.8px 'Roboto Condensed';
+  font: 400 13px "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   padding: 10px 15px;
   color: var(--cinza-escuro);
@@ -218,7 +218,7 @@ Menu
 }
 
 .menu .menu-list > li.contato:hover > a {
-  font-size: 14px;
+  font-size: 13px;
   background: #DAA520;
 }
 
@@ -237,33 +237,34 @@ Menu
   display: inline-block;
   margin: 0 5px;
   padding: 0px 5px;
-  font-size: 18px;
+  letter-spacing: .6px;
   cursor: pointer;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 
 .menu .menu-list > li:hover {
   transform: scale(1.04);
+  font-weight: bolder;
 }
 
-.menu .menu-list > li:hover .form label {
-  color: var(--cinza-escuro);
+.menu .menu-list > li:hover label {
+  color: var(--dourado-cinza);
   transform: scale(1.04);
 }
 
-.menu .menu-list > li:hover .form i {
+.menu .menu-list > li:hover i {
   color: var(--cinza-claro);
   transform: scale(1.04);
 }
 
 .menu .menu-list > li:hover > a { 
-  color: var(--cinza-escuro);
+  color: var(--dourado-medio);
   transform: scale(1.04);
 }
 
 .menu .menu-list > li > a {
   text-decoration: none;
-  color: var(--dourado-claro);
+  color: var(--dourado-cinza);
   cursor: pointer;
 }
 
@@ -277,16 +278,35 @@ Menu
 	.dropdown-select {
 		display: flex;
     justify-content: space-evenly;
-
+    color: var(--dourado-cinza);
+    transition: 0.2s;
+    
     label {
       padding-right: 3px;
-      font: 400 18px 'Bebas Neue';
-      letter-spacing: 0.8px;
-      color: var(--dourado-claro);
+      font: 400 16px "M PLUS Rounded 1c", sans-serif;
+      text-transform: uppercase;    
       cursor: pointer;
     }
 
+    &:hover label {
+      color: var(--dourado-medio) !important;
+      font-weight: bolder;
+      transform: scale(1.04);
+    }
+
 		.button {
+      display: inline-flex;
+      align-items: center;
+			border: none;
+			background: transparent;
+      color: var(--dourado-cinza);
+			cursor: pointer;
+      margin-left: -2%;
+
+      &:focus {
+        outline: none;
+      }
+
 			.fa-chevron-down {
 				transform: rotate(0deg);
 				transition: all 0.6s;
@@ -295,27 +315,13 @@ Menu
 				}
 			}
 		}
-
-		button {
-      display: inline-flex;
-      align-items: center;
-			border: none;
-			background: transparent;
-      color: var(--dourado-cinza);
-			cursor: pointer;
-      margin-left: -2%;
-		}
-
-    button:focus {
-      outline: none;
-    }
 	}
 
 	.dropdown-list {
 		display: none;
     position: absolute;
     top: 130%;
-    right: -42%;
+    right: -50%;
     width: max-content;
     padding: 0;
     background-color: #554d36e9;
@@ -358,40 +364,49 @@ Menu
 
 .main {
   position: relative;
-  background-image: url();
+  background-image: url(../media/imagem/portugal-page.jpg);
+  background-size: cover;
 }
 
 
 article.blog {
-  padding: 12% 15%;
+  padding: 12% 10%;
+  background-color: #dbd2b2a1;
 }
 
 article.blog .blog-content {
+  border-radius: 18px 0 18px 18px;
+  box-shadow: 0px 5px 30px #00000029;
+  border: 1px solid #b1a76a8c;
+  
+
   h2 {
     padding: 15px 20px;
-    font: 600 16px 'Poppins', sans-serif;
-    background: linear-gradient(7deg, #3b321af1 10%, #000000d2 95%);    
+    font: 600 12px 'Poppins', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 0px 10px #4944318f;    
+    background: linear-gradient(277deg, rgb(207 195 154 / 63%) 5%, rgb(55 42 8 / 58%) 95%);    
     color: #f2efe7;
-    border-radius: 14px 0 0 0;
+    border-radius: 15px 0 0 0;
   }
 
   .content-text {
     padding: 20px;
-    background-color: #9f998a4d;
-    border-radius: 0 0 14px 0;
+    background-color: #faf8f3f5;
+    border-radius: 0 0 15px 15px;
 
     h3 {
-      padding: 10px 0;
-      font: 600 14px 'Poppins', sans-serif;
-      text-transform: uppercase;
-      color: #634b10;
+      padding: 20px 15px 10px 15px;
+      color: #97731a;
+      font: 600 20px 'Poppins', sans-serif;
     }
   
     p {
-      padding: 5px;
+      padding: 10px 15px;
       display: flex;
       text-align: justify;
-      font: 400 14px 'Poppins', sans-serif;
+      font: 400 16px 'Poppins', sans-serif;
+      color: #5e5c5c;
     }
   }
 
@@ -403,13 +418,14 @@ Headings
 
 .title {
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 
 .title h1 {
   margin: 25px 0;
-  font: 800 50px 'Bebas Neue', sans-serif;
+  font: 600 40px 'Bebas Neue', sans-serif;
   text-shadow: 0px .5px 2px #2619134b;
+  letter-spacing: 1.2px;
 }
 
 .gradient-dark {
@@ -455,45 +471,212 @@ Headings
   Margin & Padding
 **/
 
+/***
+Margin
+*/
+
 .m-1 {
-  margin: 1rem;
+  margin: 1rem !important;
 }
+
+.m-2 {
+  margin: 2rem !important;
+}
+
+.m-3 {
+  margin: 3rem !important;
+}
+
+.m-4 {
+  margin: 4rem !important;
+}
+
+
+/***
+Margin Left
+*/
 
 .ml-1 {
-  margin-left: 1rem;
+  margin-left: 1rem !important; 
 }
+
+.ml-2 {
+  margin-left: 2rem !important;
+}
+
+.ml-3 {
+  margin-left: 3rem !important;
+}
+
+.ml-4 {
+  margin-left: 4rem !important;
+}
+
+/***
+Margin Right
+*/
 
 .mr-1 {
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
+
+.mr-2 {
+  margin-right: 2rem !important;
+}
+
+.mr-3 {
+  margin-right: 3rem !important;
+}
+
+.mr-4 {
+  margin-right: 4rem !important;
+}
+
+/***
+Margin Top
+*/
+
 
 .mt-1 {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
+
+.mt-2 {
+  margin-top: 2rem !important;
+}
+
+.mt-3 {
+  margin-top: 3rem !important;
+}
+
+.mt-4 {
+  margin-top: 4rem !important;
+}
+
+/***
+Margin Bottom
+*/
+
 
 .mb-1 {
-  margin-bottom: 1rem;
+  margin-bottom: 4rem !important;
 }
+
+.mb-2 {
+  margin-bottom: 2rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 4rem !important;
+}
+
+/***
+Padding
+*/
 
 .p-1 {
-  padding: 1rem;
+  padding: 1rem !important;
 } 
 
+.p-2 {
+  padding: 2rem !important;
+} 
+
+.p-3 {
+  padding: 3rem !important;
+} 
+
+
+.p-4 {
+  padding: 4rem !important;
+} 
+
+/***
+Padding Left
+*/
+
+
 .pl-1 {
-  padding-left: 1rem;
+  padding-left: 1rem !important;
 }
+
+.pl-2 {
+  padding-left: 2rem !important;
+}
+
+.pl-3 {
+  padding-left: 3rem !important;
+}
+
+.pl-4 {
+  padding-left: 4rem !important;
+}
+
+/***
+Padding Right
+*/
+
 
 .pr-1 {
-  padding-right: 1rem;
+  padding-right: 1rem !important;
 }
+
+.pr-2 {
+  padding-right: 2rem !important;
+}
+
+.pr-3 {
+  padding-right: 3rem !important;
+}
+
+.pr-4 {
+  padding-right: 4rem !important;
+}
+
+/***
+Padding Top
+*/
 
 .pt-1 {
-  padding-top: 1rem;
+  padding-top: 1rem !important;
 }
 
-.pb-1 {
-  padding-bottom: 1rem;
+.pt-2 {
+  padding-top: 2rem !important;
 }
+
+.pt-3 {
+  padding-top: 3rem !important;
+}
+
+.pt-4 {
+  padding-top: 4rem !important;
+}
+
+/***
+Padding Bottom
+*/
+
+.pb-1 {
+  padding-bottom: 1rem !important;
+}
+
+.pb-2 {
+  padding-bottom: 2rem !important;
+}
+
+.pb-3 {
+  padding-bottom: 3rem !important;
+}
+
+.pb-4 {
+  padding-bottom: 4rem !important;
+}
+
 
 /************************  
   Width
