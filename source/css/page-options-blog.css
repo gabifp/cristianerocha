@@ -144,14 +144,10 @@ Menu
   justify-content: center;
 }
 
-.menu .menu-list li:first-child {
-  margin-right: 18px;
-}
-
 .menu .menu-list > li.contato > a {
   display: inline-flex;
   flex-wrap: wrap;
-  font: 400 13px "Roboto Condensed", sans-serif;
+  font: 400 14px "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   padding: 10px 15px;
   color: var(--cinza-escuro);
@@ -163,7 +159,7 @@ Menu
 }
 
 .menu .menu-list > li.contato:hover > a {
-  font-size: 13px;
+  font-size: 14px;
   background: #DAA520;
 }
 
@@ -266,15 +262,16 @@ Menu
 		display: none;
     position: absolute;
     top: 130%;
-    right: -50%;
+    right: -55%;
     width: max-content;
     padding: 0;
     background-color: #554d36e9;
     border-radius: 5px;
     align-items: center;
+    z-index: 100;
 
 		li {
-			width: 100%;
+			min-width: 215px;
       list-style: none;
       border-radius: 5px;
 
@@ -312,7 +309,7 @@ Menu
 
   .title {
     background-color: transparent;
-    z-index: 100;
+    z-index: 80;
     color: var(--cinza-escuro);
     margin-left: 10%;
   }
