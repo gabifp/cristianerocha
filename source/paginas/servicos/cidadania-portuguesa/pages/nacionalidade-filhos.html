@@ -41,9 +41,6 @@
             <a href="./../../../../../index.html">Home</a>
           </li>
           <li>
-            <a href="#">Sobre nós</a>
-          </li>
-          <li>
             <div class="dropdown-menu">
               <div class="dropdown-select">
                 <button class="button" id="button-services"> 
@@ -80,8 +77,11 @@
             </div>
           </li>
           <li>
-            <a href="#">Depoimentos</a>
+            <a href="#">Sobre nós</a>
           </li>
+          <!-- <li>
+            <a href="#">Depoimentos</a>
+          </li> -->
           <li></li>
           <li class="contato">
             <a href="./../../../../../index.html#contact">
@@ -97,7 +97,7 @@
   <section class="main .scroll">
     <article class="blog">
       <div>
-        <div class="title gradient-dark mt-2">
+        <div class="title gradient-dark">
           <h1>Cidadania Portuguesa</h1>
         </div>
         <div class="d-flex-column-end">
@@ -108,11 +108,27 @@
         </div>
       </div>
       <div class="blog-content">
-        <h2> 
-          Cidadania para Filhos de Portugueses
-        </h2>
+        <div class="heading-page">
+          <h2>
+            Para Filhos de Portugueses
+          </h2>
+          <div class="button-chips">
+            <a class="btn" id="nav-on-1" onclick="onShowContent('nav-1')">
+              Quem tem direito
+            </a>
+            <a class="btn" id="nav-on-2" onclick="onShowContent('nav-2')">
+              Como solicitar
+            </a>
+            <a class="btn" id="nav-on-3" onclick="onShowContent('nav-3')">
+              Para filho menor de idade
+            </a>
+            <a class="btn" id="nav-on-4" onclick="onShowContent('nav-4')">
+              Para filho maior de idade
+            </a>
+          </div>
+        </div>
         <div class="content-text">
-          <section id="-nav-1">
+          <section id="nav-1">
             <h3>
               Quem tem direito à cidadania portuguesa por atribuição?
             </h3>
@@ -130,7 +146,7 @@
               </div>
             </div>
           </section>
-          <section id="-nav-2">
+          <section id="nav-2">
             <h3>
               Como solicitar a cidadania portuguesa por atribuição?
             </h3>
@@ -167,13 +183,15 @@
                 <span class="border-left">
                   <span></span>
                 </span> 
-                <p>
-                  Os documentos devem ser traduzidos para o português e legalizados pela autoridade competente.
-                </p>
+                <span class="enfase">
+                  <p>
+                    Os documentos devem ser traduzidos para o português e legalizados pela autoridade competente.
+                  </p>
+                </span>
               </div>
             </div>
           </section>
-          <section id="-nav-3">
+          <section id="nav-3">
             <h3>Cidadania para filho menor de idade: quais são as regras?
             </h3>
             <div class="d-flex row-reverse align-center">
@@ -181,26 +199,28 @@
                 <p>
                   A cidadania portuguesa para filhos menores de idade é concedida por atribuição. Isso significa que o filho será considerado português desde o nascimento.
                 </p>
-                <p>
-                  Para que o pedido seja deferido, é necessário que o requerente cumpra os seguintes requisitos:
-                </p>
-                <ul>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>
-                    Ser filho de um nacional português;
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>
-                    Ter menos de 18 anos de idade;
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>
-                    Não ter sido privado da nacionalidade portuguesa por decisão judicial.
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img src="../../../../media/imagem/familia-2.png">
+                <div class="d-flex">
+                  <img src="../../../../media/imagem/familia-2.png" class="ml-0">
+                  <div class="d-flex column justify-content-center">
+                    <p>
+                      Para que o pedido seja deferido, é necessário que o requerente cumpra os seguintes requisitos:
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>
+                        Ser filho de um nacional português;
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>
+                        Ter menos de 18 anos de idade;
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>
+                        Não ter sido privado da nacionalidade portuguesa por decisão judicial.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="d-flex row mt-1">
@@ -208,13 +228,15 @@
                 <span class="border-left">
                   <span></span>
                 </span> 
-                <p>
-                  O processo de cidadania portuguesa para filho menor de idade pode ser realizado no Brasil, perante um consulado português, ou em Portugal, perante uma conservatória dos registos centrais.
-                </p>
+                <span class="enfase">
+                  <p>
+                    O processo de cidadania portuguesa para filho menor de idade pode ser realizado no Brasil, perante um consulado português, ou em Portugal, perante uma conservatória dos registos centrais.
+                  </p>
+                </span>
               </div>
             </div>
           </section>
-          <section id="-nav-4">
+          <section id="nav-4">
             <h3>Cidadania para filho maior de idade: é possível?
             </h3>
             <div class="d-flex row align-center">
@@ -222,40 +244,44 @@
                 <p>
                   Sim, é possível que um filho maior de idade obtenha a cidadania portuguesa como filho de português.
                 </p>
-                <p>
-                  Para isso, é necessário que o filho cumpra os seguintes requisitos:
-                </p>
-                <ul>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>                
-                    Ser filho de um nacional português;
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>                
-                    Ter menos de 18 anos de idade;
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>                
-                    Não ter sido privado da nacionalidade portuguesa por decisão judicial.
-                  </li>
-                  <li>
-                    <i class="fa-regular fa-circle-dot"></i>                
-                    Ter o ascendente português como declarante na certidão de nascimento.
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <img src="../../../../media/imagem/familia-3.png">
+                <div class="d-flex">
+                  <img class="ml-0" src="../../../../media/imagem/familia-1.png" alt="Foto familia">
+                  <div class="d-flex column justify-content-center">
+                    <p class="pb-0">
+                      Para isso, é necessário que o filho cumpra os seguintes requisitos:
+                    </p>
+                    <ul>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>                
+                        Ser filho de um nacional português;
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>                
+                        Ter menos de 18 anos de idade;
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>                
+                        Não ter sido privado da nacionalidade portuguesa por decisão judicial.
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-circle-dot"></i>                
+                        Ter o ascendente português como declarante na certidão de nascimento.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="d-flex row mt-1">
               <div class="text-blog d-flex row align-center">
                 <span class="border-left">
                   <span></span>
+                </span> 
+                <span class="enfase">
+                  <p>
+                    Se o ascendente português estiver vivo, ele deve realizar a conversão da nacionalidade portuguesa (convolação) e, assim, transmitir a cidadania para os filhos maiores de idade.
+                  </p>
                 </span>
-                <p>
-                  Se o ascendente português estiver vivo, ele deve realizar a conversão da nacionalidade portuguesa (convolação) e, assim, transmitir a cidadania para os filhos maiores de idade.
-                </p>
               </div>
             </div>
           </section>
@@ -266,6 +292,8 @@
   </section>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="../../js/script.js"></script> 
+  <script src="../../../../js/script.js"></script> 
+  <script src="../../../../js/page.js"></script> 
+
 </body>
 </html>

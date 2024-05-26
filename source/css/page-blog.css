@@ -361,7 +361,6 @@ Menu
 
 .main {
   position: relative;
-  background-image: url(../media/imagem/portugal-page.jpg);
   background-size: cover;
 }
 
@@ -417,14 +416,53 @@ article.blog .blog-content {
   border: 1px solid #b1a76a8c;
   
 
-  h2 {
+  .heading-page {
     padding: 15px 20px;
-    font: 600 12px 'Poppins', sans-serif;
+    background: linear-gradient(277deg, rgb(207 195 154 / 63%) 5%, rgb(55 42 8 / 58%) 95%);    
+    border-radius: 15px 0 0 0;
+  }
+
+  h2 {
+    font: 600 14px 'Poppins', sans-serif;
     text-transform: uppercase;
     text-shadow: 1px 0px 10px #4944318f;    
-    background: linear-gradient(277deg, rgb(207 195 154 / 63%) 5%, rgb(55 42 8 / 58%) 95%);    
     color: #f2efe7;
-    border-radius: 15px 0 0 0;
+  }
+
+  .button-chips {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    
+    a {
+      margin-right: 12px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 30px;
+      border-radius: 18px;
+      background-color: rgba(250, 248, 243, 0.96);
+      color: var(--cinza-claro);
+      font: 400 12px "Poppins";
+      cursor: pointer;
+      transition: all .3s ease;
+
+      &:hover, &:focus-visible &:active {
+        transform: scale(1.04);
+        font-weight: 500;
+        border: 1px solid #97731a;
+        background-color: #f1e3b9;
+        color: #4f3d0f;      
+      }
+
+      &.simulated-active {
+        transform: scale(1.04);
+        background-color: #f1e3b9;
+        border: 1px solid #97731a;
+        color: #4f3d0f;      
+        box-shadow: 0px 0px 3px 1px #dbd4b1;      
+      }
+    }
   }
 
   .content-text {
@@ -432,12 +470,30 @@ article.blog .blog-content {
     background-color: #faf8f3f5;
     border-radius: 0 0 15px 15px;
 
+
+    section#nav-1 {
+      display: block;
+    }
+
+    section#nav-2 {
+      display: none;
+    }
+
+    section#nav-3 {
+      display: none;
+    }
+
+    section#nav-4 {
+      display: none;
+    }
+
     section {
       margin: 40px;
 
       div.text-blog {
         margin-right: 32px;
         margin-left: 32px;
+        width: 100vw !important;
       }
 
       img {
@@ -449,9 +505,10 @@ article.blog .blog-content {
       }
 
       h3 {
-        margin: 50px 30px 70px 30px;
+        margin: 30px;
         color: #97731a;
-        font: 600 40px 'Poppins', sans-serif;      }
+        font: 600 40px 'Poppins', sans-serif;      
+      }
   
       h3:not(:first-child) {
         margin-top: 20px;
@@ -459,10 +516,9 @@ article.blog .blog-content {
     
       p {
         padding-bottom: 24px;
-        display: flex;
         line-height: 24px;
         text-align: justify;
-        font: 400 18px 'Poppins', sans-serif;
+        font: 400 15px 'Poppins', sans-serif;
         color: #5e5c5c;
       }
 
@@ -473,11 +529,13 @@ article.blog .blog-content {
         color: #5e5c5c;
 
         li {
-          padding: 5px;
+          padding: 10px;
+          text-align: justify;
         }
 
         i {
           padding-right: 10px;
+          font-size: 18px;
           color: var(--dourado);
         }
       }
@@ -485,23 +543,37 @@ article.blog .blog-content {
       span.border-left {
         position: relative;
         border: 5px solid var(--cinza-escuro);
-        border-radius: 10px;
-        height: 60px;
+        border-radius: 4px;
+        min-height: 96px;
+        z-index: 100 !important;
 
         span {
             position: absolute;
-            border: 5px solid var(--dourado-claro-2);
-            border-radius: 5px;
-            min-height: 60px;
+            border: 5px solid #6e5612;
+            border-radius: 6px;
+            min-height: 96px;
+            opacity: .5;
           }
       }
 
-      span.border-left ~ p {
-        padding: 24px;
+      span.enfase {
+        margin-left: 12px;
+        padding: 12px 18px;
+        display: inline-flex;
         align-items: center;
-        font: 600 15px "Poppins", sans-serif;   
-        color: var(--cinza-claro);
+        width: 100%;
+        min-height: 80px;
+        background-color: #ddd0ab;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+
+        p {
+          padding: 0;
+          font: 400 15px "Poppins", sans-serif;   
+          color: var(--cinza-escuro);
+        }
       }
+      
       
     }
 
@@ -671,6 +743,34 @@ Margin Bottom
   margin-bottom: 64px !important;
 }
 
+.m-0 {
+  margin: 0 !important;
+}
+
+
+/***
+Margin Zero
+*/
+
+
+.mr-0 {
+  margin-right: 0 !important;
+}
+
+.ml-0 {
+  margin-left: 0 !important;
+}
+
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+
+
 /***
 Padding
 */
@@ -772,6 +872,30 @@ Padding Bottom
 
 .pb-4 {
   padding-bottom: 64px !important;
+}
+
+/***
+Padding Zero
+*/
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}
+
+.pr-0 {
+  padding-right: 0 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
+}
+
+.pb-0 {
+  padding-bottom: 0 !important;
 }
 
 
