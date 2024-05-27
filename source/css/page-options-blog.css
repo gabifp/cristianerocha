@@ -304,7 +304,7 @@ Menu
   Services Cards
 **/
 
-.background-image {
+.background-default {
   background-color: #dbd2b2a1;
 
   .title {
@@ -407,9 +407,26 @@ Menu
 
 .main {
   position: relative;
+}
+
+.background-portugal {
   background-image: url(../media/imagem/portugal-page.jpg);
   background-size: cover;
+
 }
+
+.background-espanha {
+  background-image: url(../media/imagem/espanha-1.png);
+  background-size: cover;
+}
+
+/* .background-alemanha {
+
+} */
+
+/* .background-italia {
+
+} */
 
 
 article.blog {

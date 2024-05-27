@@ -361,6 +361,15 @@ Menu
 
 .main {
   position: relative;
+}
+
+.background-portugal {
+  background-image: url(../media/imagem/portugal-page.jpg);
+  background-size: cover;
+}
+
+.background-espanha {
+  background-image: url(../media/imagem/espanha-2.png);
   background-size: cover;
 }
 
